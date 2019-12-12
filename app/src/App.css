@@ -39,13 +39,16 @@
 
 .kanye-quote {
   width: 35vw;
-  background-color: black;
+  background-color: transparent;
   height: 15vw;
   margin: 0 auto;
   margin-top: 4rem;
-  color: white;
+  color: black;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
 }
 
 .wisdom {
-  padding: 2rem;
+  padding: 0 10px;
 }

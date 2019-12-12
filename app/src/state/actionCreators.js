@@ -1,5 +1,11 @@
 import * as types from './actionTypes';
 import axios from 'axios';
+import {Howl, Howler} from 'howler';
+import thanks from '../sounds/thanks.mp3'
+
+const kanyeSound = new Howl({
+  src: [thanks]
+})
 
 export function increment() {
     return {
@@ -8,6 +14,7 @@ export function increment() {
 }
 
 export const getKanyeWisdom = () => (dispatch) => {
+    kanyeSound.play()
     axios.get('https://api.kanye.rest?format=text')
       .then(response => {
           const kanyeWisdom = response.data

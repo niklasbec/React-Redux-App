@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { connect } from 'react-redux'
 import { increment, getKanyeWisdom } from './state/actionCreators'
 
+
 const Button = styled.a`
 
   display: inline-block;
