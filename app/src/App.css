@@ -40,7 +40,7 @@
 .kanye-quote {
   width: 35vw;
   background-color: transparent;
-  height: 15vw;
+  height: 10vw;
   margin: 0 auto;
   margin-top: 4rem;
   color: black;
@@ -51,4 +51,19 @@
 
 .wisdom {
   padding: 0 10px;
+}
+
+h2 {
+  margin-top: 3.7rem;
+  font-size: 2rem;
+}
+
+.kanye-img2 {
+  position: relative;
+  top: 1rem; 
+}
+
+.header-block {
+  display: flex;
+  justify-content: center;
 }
