@@ -1,0 +1,2 @@
+export const INCREMENT = 'INCREMENT'
+export const KANYE_WISDOM = 'KANYE_WISDOM'
