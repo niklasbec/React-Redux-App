@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { increment } from './state/actionCreators'
 
-function App() {
+const Button = styled.a`
+
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  background: black;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+`
+
+
+function App({increment, count}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Kanye says:</h2>
+      <div className='kanye-quote'>
+      <p>Quote here! {count}</p>
+      </div>
+      <button onClick={increment}>Hi</button>
+      <Button onClick={increment}>Kanye, tell me more!</Button>
     </div>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    count: state.count,
+  };
+}
+export default connect(
+  mapStateToProps, 
+  { increment } 
+)(App);
+
+

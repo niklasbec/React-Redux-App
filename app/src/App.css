@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.kanye-quote {
+  width: 20vw;
+  background-color: black;
+  height: 10vw;
+  margin: 0 auto;
+  margin-top: 4rem;
+  color: white;
+}
