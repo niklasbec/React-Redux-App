@@ -38,10 +38,14 @@
 }
 
 .kanye-quote {
-  width: 20vw;
+  width: 35vw;
   background-color: black;
-  height: 10vw;
+  height: 15vw;
   margin: 0 auto;
   margin-top: 4rem;
   color: white;
+}
+
+.wisdom {
+  padding: 2rem;
 }

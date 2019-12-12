@@ -10,3 +10,13 @@ export function countReducer (count = initialCount, action) {
             return count
     }
 }
+
+const initialKanyeWisdom = ['Click the button to generate kanye wisdom'];
+export function kanyeReducer(wisdom = initialKanyeWisdom, action) {
+  switch (action.type) {
+    case types.KANYE_WISDOM:
+      return action.payload;
+    default:
+      return wisdom;
+  }
+}

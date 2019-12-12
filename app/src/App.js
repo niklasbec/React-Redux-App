@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import styled from 'styled-components'
 import { connect } from 'react-redux'
-import { increment } from './state/actionCreators'
+import { increment, getKanyeWisdom } from './state/actionCreators'
 
 const Button = styled.a`
 
@@ -18,15 +18,19 @@ const Button = styled.a`
 `
 
 
-function App({increment, count}) {
+function App({increment, count, getKanyeWisdom, wisdom}) {
+
+  useEffect(() => {
+    getKanyeWisdom()
+  }, [])
+
   return (
     <div className="App">
       <h2>Kanye says:</h2>
       <div className='kanye-quote'>
-      <p>Quote here! {count}</p>
+      <p className='wisdom'>{wisdom}</p>
       </div>
-      <button onClick={increment}>Hi</button>
-      <Button onClick={increment}>Kanye, tell me more!</Button>
+      <Button onClick={getKanyeWisdom}>Kanye, tell me more!</Button>
     </div>
   );
 }
@@ -34,11 +38,12 @@ function App({increment, count}) {
 function mapStateToProps(state) {
   return {
     count: state.count,
+    wisdom: state.wisdom
   };
 }
 export default connect(
   mapStateToProps, 
-  { increment } 
+  { increment, getKanyeWisdom } 
 )(App);
 
 
